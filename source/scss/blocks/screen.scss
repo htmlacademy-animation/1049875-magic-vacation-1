@@ -10,6 +10,23 @@
     display: none;
   }
 
+  &--intro {
+    &.active {
+      .intro__message {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &--game {
+    &.active {
+      .form__field {
+        width: calc(100% - 21rem);
+      }
+    }
+  }
+
   @media (max-width: $tablet) and (orientation: portrait) {
     min-height: calc(var(--vh, 1vh) * 100);
   }
