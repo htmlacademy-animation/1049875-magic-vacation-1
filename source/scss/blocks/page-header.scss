@@ -5,6 +5,9 @@
   right: 0;
   padding: 2.7rem 0;
   z-index: 10;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 1s cubic-bezier(.26,.79,.5,1.01), opacity 1s cubic-bezier(.26,.79,.5,1.01);
 
   @media (min-width: $stop-scaling) {
     padding: 27px 0;
@@ -35,6 +38,8 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(.26,.79,.5,1.01) 1s;
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -242,6 +247,12 @@
     color: inherit;
     padding: 0 0.5em 0.5em;
 
+    &.active {
+      &::after {
+        transition-duration: 1s;
+      }
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -266,14 +277,6 @@
         left: 0;
         right: 0;
         background-color: $c-dark;
-      }
-    }
-
-    &.active {
-      &::after {
-        width: 100%;
-        left: 0;
-        right: auto;
       }
     }
 
