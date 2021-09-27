@@ -9,6 +9,8 @@ import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
 
+const body = document.querySelector('body');
+
 // init modules
 mobileHeight();
 slider();
@@ -22,10 +24,6 @@ social();
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
 
-const body = document.querySelector('body');
-
 document.addEventListener('DOMContentLoaded', () => {
   body.classList.add('active');
 });
-
-
