@@ -10788,7 +10788,7 @@ const fullPageScroll = new _modules_full_page_scroll__WEBPACK_IMPORTED_MODULE_8_
 fullPageScroll.init();
 
 document.addEventListener('DOMContentLoaded', () => {
-  body.classList.add('active');
+  body.classList.add('dom-loaded');
 });
 
 
