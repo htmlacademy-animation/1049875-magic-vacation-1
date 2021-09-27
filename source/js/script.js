@@ -25,5 +25,5 @@ const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
 
 document.addEventListener('DOMContentLoaded', () => {
-  body.classList.add('active');
+  body.classList.add('dom-loaded');
 });
