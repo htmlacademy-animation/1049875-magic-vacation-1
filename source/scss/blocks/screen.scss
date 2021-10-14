@@ -5,6 +5,8 @@
   min-height: 100vh;
   z-index: 1;
   overflow: hidden;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 
   &.active {
     .screen__footer {
@@ -14,7 +16,8 @@
   }
 
   &--hidden {
-    display: none;
+    // display: none;
+    opacity: 0;
   }
 
   &--intro {
@@ -360,6 +363,12 @@
 
 .screen--prizes {
   background-color: $c-dark;
+
+  &.active {
+    .overflow {
+      top: 0;
+    }
+  }
 }
 
 .screen--game {
